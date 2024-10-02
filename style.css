@@ -1,0 +1,118 @@
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    height: 100%;
+    font-family: Arial, sans-serif; /* Add a friendly font */
+}
+
+/* Flexbox container */
+.container-ily {
+    display: flex;                     
+    flex-direction: column;           
+    justify-content: center;          
+    align-items: center;              
+    height: 100vh;                   
+    background-color: #e0f7fa;       /* Light blue background for a friendly vibe */
+}
+
+/* Image container with responsive image */
+.img-container {
+    margin-bottom: 5px;               /* Space between image and text */
+    display: flex;                    
+    justify-content: center;          /* Center the image */
+}
+
+img {
+    width: 80%;                       /* Responsive width */
+    max-width: 360px;                 /* Maximum size */
+    height: auto;                     /* Keep the aspect ratio */
+    background-color: transparent;
+}
+
+/* Text container */
+.text-container {
+    margin-bottom: 20px;
+    text-align: center;               /* Center the text */
+}
+
+.i-love-u {
+    font-size: 2.5em;                 /* Larger font size */
+    text-align: center;               
+    color: #00796b;                   /* Friendly green color */
+    transition: transform 0.5s ease, color 0.5s ease; /* Smooth transition */
+}
+
+.i-love-u:hover {
+    transform: scale(1.5);            /* Scale up by 1.5 times */
+    color: #ff5722;                   /* Change color on hover */
+}
+
+/* Buttons container */
+.buttons {
+    display: flex;                    
+    gap: 15px;                        /* Space between buttons */
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;               /* Padding inside buttons */
+    font-size: 1.2em;                 /* Button text size */
+    cursor: pointer;                  /* Cursor changes to pointer */
+    border: none;                     /* No borders */
+    border-radius: 10px;              /* Rounded corners */
+    background-color: #ffcc80;        /* Light orange background */
+    color: #4e342e;                   /* Darker text color for contrast */
+    transition: all 0.3s;             /* Smooth transition for hover effects */
+}
+
+button:hover {
+    background-color: #ffb74d;        /* Darker orange on hover */
+    transform: scale(1.05);           /* Slightly enlarge on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 800px) {           /* For tablets or small devices */
+    .i-love-u {
+        font-size: 2em;               /* Smaller font size */
+    }
+
+    button {
+        font-size: 1em;               /* Adjust button text size */
+        padding: 8px 16px;            /* Adjust button padding */
+    }
+
+    img {
+        width: 60%;                   /* Adjust image width */
+    }
+}
+
+@media (max-width: 600px) {           /* For mobile devices */
+    .i-love-u {
+        font-size: 1.8em;             /* Further reduce font size */
+    }
+
+    button {
+        font-size: 0.9em;             /* Adjust button text size */
+        padding: 7px 14px;            /* Adjust button padding */
+    }
+
+    img {
+        width: 55%;                   /* Adjust image size for mobile */
+    }
+}
+
+@media (max-width: 400px) {           /* For very small devices (small phones) */
+    .i-love-u {
+        font-size: 1.5em;             /* Reduce font size further */
+    }
+
+    button {
+        font-size: 0.8em;             /* Smaller button text */
+        padding: 6px 12px;            /* Smaller button padding */
+    }
+
+    img {
+        width: 50%;                   /* Adjust image size for smaller screens */
+    }
+}
